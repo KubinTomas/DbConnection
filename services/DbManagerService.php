@@ -10,7 +10,12 @@ class DbManagerService
     }
 
 
-    function CreateTable($tableConfig){
-        
+    function CreateTable(TableConfigModel $tableConfig)
+    {
+        $sql = "CREATE TABLE " . $tableConfig->GetName() . " (";
+
+        $sql .= ");";
+
+        // $dbConnectio
     }
 }

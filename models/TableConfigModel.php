@@ -1,12 +1,23 @@
 <?php
 
-class TableConfigModel{
-    private $columnName;
-    private $dataType;
+class TableConfigModel
+{
+    private $name;
+    private $columns;
 
-    function __construct($columnName, $dataType)
+    function __construct($name, $columns)
     {
-        $this->columnName = $columnName;
-        $this->dataType = $dataType;
+        $this->name = $name;
+        $this->columns = $columns;
+    }
+
+    function GetName()
+    {
+        return $this->name;
+    }
+
+    function GetColumns()
+    {
+        return $this->columns;
     }
 }
