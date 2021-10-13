@@ -11,14 +11,16 @@
 
     <?php
     include "DbConnector.php";
+    include "services/math/CalculatorService.php";
 
     // $dbConnector = DbConnector::GetDefaultDbConnector();
     // $dbConnection = $dbConnector->Connection();
 
     $dbConnection = DbConnector::GetDefaultDbConnection();
 
-    
-    echo "Echlte..";
+    $calculator = new CalculatorService(1);
+
+    echo "Echlte.." . $calculator->Sum(5, 10);
 
 
     ?>

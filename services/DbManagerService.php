@@ -14,8 +14,19 @@ class DbManagerService
     {
         $sql = "CREATE TABLE " . $tableConfig->GetName() . " (";
 
+        for ($i = 0; $i < count($tableConfig->GetColumns()); $i++) {
+            $column =  $tableConfig->GetColumns()[$i];
+
+            $sql .= $column->GetName() . " " . $column->GetDataType();
+
+            if ($i != count($tableConfig->GetColumns()) - 1) {
+                $sql .= ",";
+            }
+
+        }
+
         $sql .= ");";
 
-        // $dbConnectio
+        
     }
 }
