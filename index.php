@@ -23,9 +23,6 @@
 
     echo "Echlte.." . $calculator->Sum(5, 10);
 
-    $res = MathService::FibSequence(20);
-    var_dump($res);
-
     ?>
 </body>
 

@@ -95,8 +95,5 @@ class MathService
     {
         return MathService::Sum($numbers) / count($numbers);
     }
-    // metoda dostane pole cisel a vrati matematickou analyzu
-    // vrati to OBJEKT, ktery obsahuje MIN, MAX, AVG
 
-    // metoda co vrati MIN, metoda co vrati MAX, metoda co vrati AVG, parametr pole
 }
