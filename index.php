@@ -12,6 +12,7 @@
     <?php
     include "DbConnector.php";
     include "services/math/CalculatorService.php";
+    include "services/math/MathService.php";
 
     // $dbConnector = DbConnector::GetDefaultDbConnector();
     // $dbConnection = $dbConnector->Connection();
@@ -22,6 +23,8 @@
 
     echo "Echlte.." . $calculator->Sum(5, 10);
 
+    $res = MathService::FibSequence(20);
+    var_dump($res);
 
     ?>
 </body>
