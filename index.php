@@ -30,7 +30,7 @@
     $dbName = "onlze";
 
     // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbName);
+    $conn = new mysqli($servername, $username, $password, $dbName);
 
     echo "<br>";
     // Check connection
@@ -38,9 +38,19 @@
         die("Connection failed: " . $conn->connect_error);
     }
     echo "Connected successfully";
+    echo "<br>";
+
+    // $sql = "INSERT INTO car (name, age) VALUES ('Ttttt', 9994)";
+
+    // if ($conn->query($sql) === TRUE) {
+    //     echo "New record created successfully";
+    // } else {
+    //     echo "Error: " . $sql . "<br>" . $conn->error;
+    // }
 
 
-  
+
+
     ?>
 </body>
 
